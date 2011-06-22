@@ -47,7 +47,7 @@ public class AccountTest {
    @Test
    public void testTransferFromBank() {
 //      account.setAch(new com.jimbobach.ach.JimBobAch());
-      Ach mockAch = new Ach() {
+      Ach mockAch = new MockAch() {
 
          @Override
          public AchResponse issueDebit(AchCredentials credentials,
@@ -59,40 +59,11 @@ public class AccountTest {
             response.timestamp = new Date();
             response.traceCode = "1";
             response.status = AchStatus.SUCCESS;
-            return response;
-         }
-
-         @Override
-         public AchResponse markTransactionAsNSF(AchCredentials credentials,
-               AchTransactionData data, String traceCode) {
-            return null;
-         }
-
-         @Override
-         public AchResponse refundTransaction(AchCredentials credentials,
-               AchTransactionData data, String traceCode) {
-            return null;
-         }
-
-         @Override
-         public AchResponse issueCredit(AchCredentials credentials,
-               AchTransactionData data) {
-            return null;
-         }
-
-         @Override
-         public AchResponse voidSameDayTransaction(AchCredentials credentials,
-               AchTransactionData data, String traceCode) {
-            return null;
-         }
-
-         @Override
-         public AchResponse queryTransaction(AchCredentials credentials,
-               AchTransactionData data, String traceCode) {
             return null;
          }
 
       };
+      
       account.setAch(mockAch);
       final BigDecimal amount = new BigDecimal("50.00");
       account.transferFromBank(amount);
