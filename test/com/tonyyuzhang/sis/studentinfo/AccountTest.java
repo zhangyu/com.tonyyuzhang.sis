@@ -8,8 +8,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class AccountTest {
-	private static final String ABA = "102000012";
-	private static final String ACCOUNT_NUMBER = "1944321518811";
+	static final String ABA = "102000012";
+	static final String ACCOUNT_NUMBER = "1944321518811";
 	
 	private Account account;
 	
@@ -38,8 +38,8 @@ public class AccountTest {
 	
 	@Test
 	public void testTransferFromBank() {
-		account.setAch(new com.jimbobach.ach.JimBobAch());
-		
+//		account.setAch(new com.jimbobach.ach.JimBobAch());
+		account.setAch(new MockAch());
 		final BigDecimal amount = new BigDecimal("50.00");
 		account.transferFromBank(amount);
 		
