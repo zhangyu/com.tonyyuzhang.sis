@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import com.jimbob.ach.Ach;
 import com.jimbob.ach.AchCredentials;
 import com.jimbob.ach.AchResponse;
+import com.jimbob.ach.AchStatus;
 import com.jimbob.ach.AchTransactionData;
 
 public class Account {
@@ -62,9 +63,9 @@ public class Account {
 		AchTransactionData data = createData(amount);
 		
 		Ach ach = getAch();
-		AchResponse achResponse = ach.issueCredit(credentials, data);
-		
-		credit(amount);
+		AchResponse achResponse = ach.issueDebit(credentials, data);
+		if (AchStatus.SUCCESS == achResponse.status)
+			credit(amount);
 	}
 
 	private Ach getAch() {
