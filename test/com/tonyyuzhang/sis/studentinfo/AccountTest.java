@@ -59,7 +59,7 @@ public class AccountTest {
             response.timestamp = new Date();
             response.traceCode = "1";
             response.status = AchStatus.SUCCESS;
-            return null;
+            return response;
          }
 
       };
