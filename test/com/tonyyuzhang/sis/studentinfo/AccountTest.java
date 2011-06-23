@@ -47,8 +47,22 @@ public class AccountTest {
    @Test
    public void testTransferFromBank() {
 //      account.setAch(new com.jimbobach.ach.JimBobAch());
-      Ach mockAch = new MockAch() {
-
+      account.setAch(createMockAch(AchStatus.SUCCESS));
+      final BigDecimal amount = new BigDecimal("50.00");
+      account.transferFromBank(amount);
+      assertEquals(amount, account.getBalance());
+   }
+   
+   @Test
+   public void testFailedTransferFromBank() {
+      account.setAch(createMockAch(AchStatus.FAILURE));
+      final BigDecimal amount = new BigDecimal("50.00");
+      account.transferFromBank(amount);
+      assertEquals(new BigDecimal("0.00"), account.getBalance());
+   }
+   
+   private Ach createMockAch(final AchStatus status) {
+      return new MockAch() {
          @Override
          public AchResponse issueDebit(AchCredentials credentials,
                AchTransactionData data) {
@@ -58,16 +72,9 @@ public class AccountTest {
             AchResponse response = new AchResponse();
             response.timestamp = new Date();
             response.traceCode = "1";
-            response.status = AchStatus.SUCCESS;
+            response.status = status;
             return response;
          }
-
       };
-      
-      account.setAch(mockAch);
-      final BigDecimal amount = new BigDecimal("50.00");
-      account.transferFromBank(amount);
-      
-      assertEquals(amount, account.getBalance());
-   }
+   } 
 }
