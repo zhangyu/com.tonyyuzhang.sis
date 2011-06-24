@@ -2,7 +2,9 @@ package com.tonyyuzhang.sis.studentinfo;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class SerializationTest {
 	@Test
 	public void testLoadToNewVersion() throws Exception {

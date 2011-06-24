@@ -2,7 +2,9 @@ package com.tonyyuzhang.sis.util;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class PasswordGeneratorTest {
 	@Test
 	public void testGeneratePassword() {

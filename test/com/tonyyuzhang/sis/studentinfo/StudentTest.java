@@ -5,7 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import java.util.logging.*;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class StudentTest {
 	private static final double GRADE_TOLERANCE = 0.05;
 	

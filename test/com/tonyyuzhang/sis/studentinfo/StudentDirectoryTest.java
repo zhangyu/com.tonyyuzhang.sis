@@ -5,7 +5,9 @@ import org.junit.Before;
 import org.junit.After;
 import org.junit.Test;
 import java.io.*;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class StudentDirectoryTest {
 	private StudentDirectory dir;
 	

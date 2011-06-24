@@ -7,7 +7,9 @@ import static org.junit.Assert.*;
 import static com.tonyyuzhang.sis.util.DateUtil.createDate;
 
 import org.junit.Test;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class CourseSessionTest extends SessionTest {
 	@Test
 	public void testCourseDates() {

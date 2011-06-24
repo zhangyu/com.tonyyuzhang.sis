@@ -8,7 +8,9 @@ import org.junit.Test;
 import java.util.*;
 import static com.tonyyuzhang.sis.util.DateUtil.createDate;
 import java.net.*;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 abstract public class SessionTest {
 	private Session session;
 	private Date startDate;

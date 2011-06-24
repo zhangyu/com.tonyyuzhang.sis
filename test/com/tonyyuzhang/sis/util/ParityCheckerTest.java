@@ -3,7 +3,9 @@ package com.tonyyuzhang.sis.util;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class ParityCheckerTest {
 
 	@Test

@@ -7,7 +7,9 @@ import org.junit.Test;
 import com.tonyyuzhang.sis.util.DateUtil;
 
 import java.util.*;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class DateUtilTest {
 
 	@Test

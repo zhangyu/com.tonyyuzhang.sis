@@ -5,7 +5,9 @@ import org.junit.Test;
 import java.util.*;
 import java.io.*;
 import com.tonyyuzhang.sis.studentinfo.*;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class StudentUITest {
 	private static final String name = "Leo Xerces Schmoo";
 	

@@ -8,7 +8,9 @@ import com.tonyyuzhang.sis.studentinfo.*;
 import com.tonyyuzhang.sis.util.DateUtil;
 
 import java.io.*;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class RosterReporterTest {
 	private Session session;
 	

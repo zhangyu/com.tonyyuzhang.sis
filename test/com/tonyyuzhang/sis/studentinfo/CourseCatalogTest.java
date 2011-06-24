@@ -6,7 +6,9 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import static com.tonyyuzhang.sis.util.DateUtil.createDate;
 import java.util.List;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class CourseCatalogTest {
 	private CourseCatalog catalog;
 	private Session session1;

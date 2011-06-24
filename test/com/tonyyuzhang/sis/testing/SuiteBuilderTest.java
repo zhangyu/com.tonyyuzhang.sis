@@ -6,10 +6,9 @@ import java.util.List;
 
 import org.junit.Test;
 
-
+@TestClass
 public class SuiteBuilderTest {
    @Test
-   @TestClass
    public void testGatherTestClassNames() {
       SuiteBuilder builder = new SuiteBuilder();
       List<String> classes = builder.gatherTestClassNames();

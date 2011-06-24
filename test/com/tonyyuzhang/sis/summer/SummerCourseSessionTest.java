@@ -1,12 +1,13 @@
 package com.tonyyuzhang.sis.summer;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 import java.util.*;
 import com.tonyyuzhang.sis.studentinfo.*;
 import com.tonyyuzhang.sis.util.DateUtil;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class SummerCourseSessionTest extends SessionTest{
 
 	@Test

@@ -1,11 +1,11 @@
 package com.tonyyuzhang.sis.studentinfo;
 
 import static org.junit.Assert.*;
-
 import java.util.*;
-
 import org.junit.Test;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class CourseTest {
 
 	@Test

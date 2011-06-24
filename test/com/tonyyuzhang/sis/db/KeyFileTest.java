@@ -7,7 +7,9 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 import java.io.*;
 import com.tonyyuzhang.sis.util.*;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class KeyFileTest {
 	private static final String FILENAME = "keyfiletest.idx";
 	private static final String KEY = "key";

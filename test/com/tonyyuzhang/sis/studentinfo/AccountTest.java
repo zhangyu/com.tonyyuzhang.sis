@@ -14,7 +14,9 @@ import com.jimbob.ach.AchCredentials;
 import com.jimbob.ach.AchResponse;
 import com.jimbob.ach.AchStatus;
 import com.jimbob.ach.AchTransactionData;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class AccountTest {
    static final String ABA = "102000012";
    static final String ACCOUNT_NUMBER = "1944321518811";

@@ -6,7 +6,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import java.io.*;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class DataFileTest {
 	private static final String ID1 = "12345";
 	private static final String ID2 = "23456";

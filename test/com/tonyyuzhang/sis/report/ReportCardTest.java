@@ -9,7 +9,9 @@ import org.junit.Test;
 import com.tonyyuzhang.sis.studentinfo.*;
 
 import java.util.*;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class ReportCardTest {
 	private ReportCard card;
 	

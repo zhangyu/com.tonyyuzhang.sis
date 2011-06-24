@@ -8,7 +8,9 @@ import java.util.*;
 
 import com.tonyyuzhang.sis.studentinfo.*;
 import static com.tonyyuzhang.sis.report.ReportConstant.NEWLINE;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class CourseReportTest {
 
 	@Test

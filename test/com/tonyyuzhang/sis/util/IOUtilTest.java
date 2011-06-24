@@ -5,7 +5,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import java.io.*;
 
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class IOUtilTest {
 	private static final String FILENAME1 = "IOUtilTest1.txt";
 	private static final String FILENAME2 = "IOUtilTest2.txt";
