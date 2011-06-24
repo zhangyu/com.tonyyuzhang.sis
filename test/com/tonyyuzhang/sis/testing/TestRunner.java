@@ -1,10 +1,7 @@
 package com.tonyyuzhang.sis.testing;
-
+import junit.framework.*;
 public class TestRunner {
-   public static final void main(String[] args) {
-   }
-   
-   public static junit.framework.Test suite() {
+   public static Test suite() {
       return new SuiteBuilder().suite();
    }
 }

@@ -44,7 +44,7 @@ public class SuiteBuilder {
       }
    }
 
-   public TestSuite suite() {
+   public Test suite() {
       TestSuite suite = new TestSuite();
       for (String s: gatherTestClassNames())
          suite.addTest(new JUnit4TestAdapter(createClass(s)));
