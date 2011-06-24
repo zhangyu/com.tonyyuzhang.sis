@@ -9,6 +9,7 @@ import org.junit.Test;
 
 public class SuiteBuilderTest {
    @Test
+   @TestClass
    public void testGatherTestClassNames() {
       SuiteBuilder builder = new SuiteBuilder();
       List<String> classes = builder.gatherTestClassNames();
