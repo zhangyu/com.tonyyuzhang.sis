@@ -8,7 +8,7 @@ import com.jimbob.ach.AchResponse;
 import com.jimbob.ach.AchStatus;
 import com.jimbob.ach.AchTransactionData;
 
-public class Account {
+public class Account implements Accountable {
    public enum BankAccountType {
       CHECKING("ck"), SAVING("sv");
       private String value;
@@ -42,11 +42,11 @@ public class Account {
          new BigDecimal(transactionCount), BigDecimal.ROUND_HALF_UP);
    }
 
-   void setBankAba(String bankAba) {
+   public void setBankAba(String bankAba) {
       this.bankAba = bankAba;   
    }
 
-   void setBankAccountNumber(String bankAccountNumber) {
+   public void setBankAccountNumber(String bankAccountNumber) {
       this.bankAccountNumber = bankAccountNumber;
    }
 
@@ -58,7 +58,7 @@ public class Account {
       this.bankAccountType = bankAccountType;
    }
 
-   void transferFromBank(BigDecimal amount) {
+   public void transferFromBank(BigDecimal amount) {
       AchResponse achResponse = getAch().issueDebit(createCredentials(), createData(amount));
       if (AchStatus.SUCCESS == achResponse.status)
          credit(amount);
