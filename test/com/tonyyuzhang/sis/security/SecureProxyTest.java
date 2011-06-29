@@ -8,6 +8,9 @@ import java.lang.reflect.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.tonyyuzhang.sis.testing.TestClass;
+
+@TestClass
 public class SecureProxyTest {
    private static final String secureMethodName = "secure";
    private static final String insecureMethodName = "insecure";
@@ -19,11 +22,11 @@ public class SecureProxyTest {
    @Before
    public void setUp() throws Exception {
       object = new Object() {
-         @SuppressWarnings("unused")
+ //        @SuppressWarnings("unused")
          public void secure() {
             secureMethodCalled = true;
          }
-         @SuppressWarnings("unused")
+ //        @SuppressWarnings("unused")
          public void insecure() {
             insecureMethodCalled = true;
          }

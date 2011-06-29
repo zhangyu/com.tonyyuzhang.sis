@@ -8,7 +8,9 @@ import java.lang.reflect.*;
 import java.util.*;
 import java.math.*;
 import com.tonyyuzhang.sis.security.*;
+import com.tonyyuzhang.sis.testing.TestClass;
 
+@TestClass
 public class AccountFactoryTest {
    private List<Method> updateMethods;
    private List<Method> readOnlyMethods;
@@ -24,7 +26,7 @@ public class AccountFactoryTest {
       
       readOnlyMethods = new ArrayList<Method>();
       addReadOnlyMethod("getBalance");
-      addReadOnlyMethod("transactionAverage");
+      addReadOnlyMethod("getTransactionAverage");
    }
 
    @SuppressWarnings("rawtypes")

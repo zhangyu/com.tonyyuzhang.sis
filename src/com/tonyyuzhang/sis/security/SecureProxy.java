@@ -25,7 +25,7 @@ public class SecureProxy implements InvocationHandler {
    }
 
    private boolean isSecure(Method method) {
-      return secureMethods.contains(method);
+      return secureMethods.contains(method.getName());
    }
 
 }
