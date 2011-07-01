@@ -22,11 +22,11 @@ public class SecureProxyTest {
    @Before
    public void setUp() throws Exception {
       object = new Object() {
- //        @SuppressWarnings("unused")
+         @SuppressWarnings("unused")
          public void secure() {
             secureMethodCalled = true;
          }
- //        @SuppressWarnings("unused")
+         @SuppressWarnings("unused")
          public void insecure() {
             insecureMethodCalled = true;
          }
