@@ -62,7 +62,7 @@ public class SearchTest {
    
    @Test
    public void testErroredSearch() throws IOException {
-      final String badUrl = "http://www.tonyyuzhang.com/hehehe.html";
+      final String badUrl = "file:" + "temp/testFileSearch1.html";
       Search search = new Search(badUrl, "whatever");
       search.execute();
       assertTrue(search.errored());
